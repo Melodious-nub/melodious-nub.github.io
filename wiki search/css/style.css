@@ -1,0 +1,29 @@
+#customSearch {
+    padding: 10% 20% 0% 20%;
+}
+
+#customSearch button {
+    margin: 2px 0 0 0;
+    background: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+body {
+    background-color: #cdcfd3;
+}
+
+h3 {
+    color: black;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.search:hover {
+    cursor: pointer;
+}

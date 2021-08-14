@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social 3D</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel=”stylesheet” href=”css/bootstrap.css”>
+    <link rel=”stylesheet” href=”css/bootstrap-responsive.css”>   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+    <section class="socialMedia">
+        <h1>Kashemmm</h1>
+        <ul class="sci ">
+            <div class="row">
+            <div class="col col-lg-2 col-md-4 col-sm-6">
+            <li data-text="facebook" data-color="#1877f2">
+                <a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </li></div>
+            <div class="col col-lg-2 col-md-4 col-sm-6">    
+            <li data-text="youtube" data-color="#ff0000">
+                <a href="https://www.youtube.com/" target="_blank" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            </li></div>
+            <div class="col col-lg-2 col-md-4 col-sm-6">    
+            <li data-text="twitter" data-color="#0099ff">
+                <a href="https://www.twitter.com/" target="_blank" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li></div>
+            <div class="col col-lg-2 col-md-4 col-sm-6">
+            <li data-text="instagram" data-color="#e4405f">
+                <a href="https://www.instagram.com/" target="_blank" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li></div>
+            <div class="col col-lg-2 col-md-4 col-sm-6">    
+            <li data-text="portfolio" data-color="#EE82EE">
+                <a href="index1.html" target="_blank" class="user-o"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+            </li></div>
+            <div class="col col-lg-2 col-md-4 col-sm-6">    
+            <li data-text="wiki" data-color="#8F9779">
+                <a href="wiki search/index.html" target="_blank" class="wikipedia-w"><i class="fa fa-wikipedia-w" aria-hidden="true"></i></a>
+            </li></div>
+        </div>
+        </ul>
+    </section>
+    <script src="vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".sci li a"), {
+            max: 30,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+        });
+        
+
+
+        let list = document.querySelectorAll('.sci li');
+        let bg = document.querySelector('.socialMedia');
+        list.forEach(elements => {
+            elements.addEventListener('mouseenter', function (event) {
+                let color = event.target.getAttribute('data-color');
+                bg.style.backgroundColor = color;
+            })
+            elements.addEventListener('mouseleave', function (event) {
+                bg.style.backgroundColor = '#fff';
+            })
+        })
+    </script>
+</body>
+
+</html>
